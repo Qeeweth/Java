@@ -9,8 +9,14 @@ TF = (9 / 5) * TC + 32
 Пример вывода:
 105.8 */
 
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-       // Ваш код
+       Scanner scan = new Scanner(System.in);
+       int tempC;
+       double tempF;
+       tempC = scan.nextInt();
+       tempF = (9 / 5) * tempC +32;
+        System.out.println(tempF);
     }
 }
