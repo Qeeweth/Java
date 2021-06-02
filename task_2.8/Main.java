@@ -4,7 +4,14 @@
 
 public class Main {
     public static void main(String[] args) {
-        //напишите тут ваш код
+        int[] array = {2,3,4,5};
+        int sum = array[0];
+        for (int i = 1; i < array.length; i++) {
+            sum *= array[i];
 
+
+
+        }
+        System.out.println(sum);
     }
 }
