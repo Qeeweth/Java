@@ -4,7 +4,20 @@
 
 public class Main {
     public static void main(String[] args) {
-        //напишите тут ваш код
+        int a = 10;
+        int b = 2;
+        int result = a % b;
+        if (result == 0) {
+            System.out.println("Делится и результат деления: " + (a / b));
+        }
+        else {
+            System.out.println("Делится и остаток от деления: " + result);
+        }
+
+
+
+
+
 
     }
 }
