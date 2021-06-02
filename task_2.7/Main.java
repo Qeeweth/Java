@@ -4,7 +4,16 @@
 
 public class Main {
     public static void main(String[] args) {
-        //напишите тут ваш код
+        int a = 31;
+        boolean isDiv = false;
+        for (int i = 2; i < 31; i++) {
+            int result = a % i;
+            if (result == 0) {
+                isDiv = true;
+                break;
+            }
 
+        }
+        System.out.println(isDiv);
     }
 }
