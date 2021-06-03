@@ -4,7 +4,18 @@
 
 public class Main {
     public static void main(String[] args) {
-        //напишите тут ваш код
-
+        int[] array = {9,7,5,3,2};
+        int x = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == 5) {
+                x++;
+            }
+        }
+        if (x == 0) {
+            System.out.println("нет");
+        }
+        else {
+            System.out.println("да");
+        }
     }
 }
