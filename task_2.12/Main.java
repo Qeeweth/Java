@@ -8,9 +8,35 @@
 3
 */
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        //напишите тут ваш код
+        Scanner in = new Scanner(System.in);
+        System.out.println("Введите массив чисел: ");
+        int arrayQuantity = in.nextInt();
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Введите значения массива: ");
+        int[] array = new int[arrayQuantity];
+        for (int i = 0; i < arrayQuantity; i++) {
+            array[i] = in.nextInt();
+        }
+        int num = 1;
+        int max = 1;
+        for (int i = 1; i < arrayQuantity; i++) {
+            if (array[i - 1] == array[i]) {
+                num++;
+            }else if (num > max) {
+                max = num;
+                num = 1;
+            }
+        }
+        if (num > max) {
+            System.out.println(num);
+        } else {
+            System.out.println(max);
+        }
+
 
     }
 }
