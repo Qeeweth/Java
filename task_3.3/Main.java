@@ -5,7 +5,15 @@
 
 public class Main {
     public static void main(String[] args) {
-        //напишите тут ваш код
+        System.out.println(num(7,7));
+
+    }
+    public static boolean num(int a, int b) {
+        if (a == b) {
+            return true;
+        } else {
+            return false;
+        }
 
     }
 }
