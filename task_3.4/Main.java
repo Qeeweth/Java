@@ -6,7 +6,14 @@
 
 public class Main {
     public static void main(String[] args) {
-        //напишите тут ваш код
+        System.out.println(num(5,6));
 
+    }
+    public static boolean num(int a, int b) {
+        if ((a + b) > 10) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
