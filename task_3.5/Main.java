@@ -3,8 +3,26 @@
 */
 
 
+import org.w3c.dom.ls.LSOutput;
+
 public class Main {
     public static void main(String[] args) {
-        int num[] = {4,2,6,2,65}
+        int[] array = {5, 6, 1, 7, 4, 9, 8};
+        values(array, 0);
+
+    }
+
+    public static void values(int[] arr, int i) {
+        if (i < arr.length) {
+            System.out.println(arr[i]);
+            values(arr, i + 1);
+        }
     }
 }
+
+
+
+
+
+
+
