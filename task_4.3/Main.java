@@ -15,19 +15,55 @@
 
 public class Main {
     public static void main(String[] args) {
+        Cat cat1 = new Cat();
+        cat1.age = 6;
+        cat1.weight = 4;
+        cat1.strength = 8;
 
+        Cat cat2 = new Cat();
+        cat2.age = 7;
+        cat2.weight = 5;
+        cat2.strength = 9;
+
+        System.out.println(cat2.fight(cat1));
+        if (cat2.fight(cat1) == cat1.fight(cat2)) {
+            System.out.println("Ничья");
+        }
+        if (cat2.fight(cat1)) {
+            System.out.println("Победил cat2");
+        }
+        if (cat1.fight(cat2)) {
+            System.out.println("Победил cat2");
+        }
     }
 }
+    class Cat {
+        public int age;
+        public int weight;
+        public int strength;
 
-class Cat {
-    public int age;
-    public int weight;
-    public int strength;
+        public Cat() {
 
-    public Cat() {
+        }
+
+        public boolean fight(Cat anotherCat) {
+            int cat1 = 0;
+            int cat2 = 0;
+            if (this.age > anotherCat.age) {
+                cat2++;
+            } else {
+                cat1++;
+            }
+            if (this.weight > anotherCat.weight) {
+                cat2++;
+            } else {
+                cat1++;
+            }
+            if (this.strength > anotherCat.strength) {
+                cat2++;
+            } else {
+                cat1++;
+            }
+            return cat2 > cat1;
+        }
     }
-
-    public boolean fight(Cat anotherCat) {
-        //напишите тут ваш код
-    }
-}
