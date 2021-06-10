@@ -13,12 +13,34 @@
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Мама" + "Мыла" + "Раму");
-        System.out.println("Мыла" + "Мама" + "Раму");
-        System.out.println("Раму" + "Мама" + "Мыла");
-        System.out.println("Раму" + "Мыла" + "Мама");
-        System.out.println("Мыла" + "Раму" + "Мама");
-        System.out.println("Мама" + "Раму" + "Мыла");
+        String[] values = {"Мама","Мыла","Раму"};
+        int x = 1;
+        int z = 2;
+        for (int i = 0; i < values.length; i++) {
+            System.out.println(values[i] + values[x] + values[z]);
+            x = ++x;
+            z = ++z;
+            if (x == values.length) {
+                x = 0;
+            }
+            else if (z == values.length) {
+                z = 0;
+            }
+        }
+        String[] values2 = {"Мыла", "Мама", "Раму"};
+        int h = 1;
+        int g = 2;
+        for (int i = 0; i < values2.length; i++) {
+            System.out.println(values2[i] + values2[h] + values2[g]);
+            h = ++h;
+            g = ++g;
+            if (h == values2.length) {
+                h = 0;
+            }
+            else if (g == values2.length) {
+                g = 0;
+            }
 
+        }
     }
 }
