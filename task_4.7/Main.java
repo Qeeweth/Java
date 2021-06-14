@@ -9,17 +9,25 @@
 •	Дополнительные классы или интерфейсы создавать нельзя.
 */
 
-public class Main {
-    public static void main(String[] args){
-    }
-}
 
-interface Animal {
-    Color getColor();
-}
-    
-class Fox {
-    public String getName() {
-        return "Fox";
+public class Main {
+    public static void main(String[] args) throws Exception {
+
+    }
+    interface Animal {
+        default String getColor() {
+            return null;
+        }
+    }
+    static class Fox implements Animal {
+        String getName() {
+            return "Fox";
+        }
+
+        @Override
+
+        public String getColor() {
+            return "Red";
+        }
     }
 }
