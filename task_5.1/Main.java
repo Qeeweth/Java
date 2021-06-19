@@ -6,6 +6,7 @@
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
@@ -17,5 +18,9 @@ public class Main {
         names.add("Георгий");
         names.add("Павел");
         names.add("Руслан");
+
+        names = (ArrayList<String>) names.stream().distinct().collect(Collectors.toList());
+
+        System.out.println(names);
     }
 }
